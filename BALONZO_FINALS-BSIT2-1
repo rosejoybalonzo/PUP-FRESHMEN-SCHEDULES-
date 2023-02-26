@@ -1,0 +1,450 @@
+using System;
+
+using System.Collections.Generic;
+
+namespace Rosejoy
+
+{
+
+    internal class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            Console.WriteLine("\nPolytechnic University of the Philippines Binan Campus \n");
+
+            Console.WriteLine("*******************************\n");
+
+            Console.WriteLine("Pagbati sa mga Bagong Iskolar ng Bayan!\n");
+
+            Console.WriteLine("This program is to help you guys to find your schedules when your PUP SIS Account is not available.\n");
+
+            UserInput();
+
+        }
+
+        static void MainMenu()
+
+        {
+
+            Console.WriteLine("***** MAIN MENU *****");
+
+            Console.WriteLine("Enter 1 to Register");
+
+            Console.WriteLine("Enter 2 to Log in and View Schedule");
+
+            Console.WriteLine("Enter 3 to Exit the program");
+
+            Console.WriteLine("_______________________________");
+
+        }
+
+        static void UserInput()
+
+        {
+
+            List<string> Student = new List<string>();
+
+            while (true)
+
+            {
+
+                MainMenu();
+
+                Console.WriteLine("Enter your choice");
+
+                int Choice = int.Parse(Console.ReadLine());
+
+                switch (Choice)
+
+                {
+
+                    case 1:
+
+                        Console.WriteLine("Enter Student name");
+
+                        string name = Console.ReadLine();
+
+                        Student.Add(name);
+
+                        Console.WriteLine("!! sucessfully registered student!");
+
+                        break;
+
+                    case 2:
+
+                        Console.WriteLine("Enter Student Name: ");
+
+                        string Search = Console.ReadLine();
+
+                        if (Student.Contains(Search))
+
+                        {
+
+                            Console.WriteLine("***** Programs *****");
+
+                            Console.WriteLine("BSIT");
+
+                            Console.WriteLine("DICT");
+
+                            Console.WriteLine("BSIE");
+
+                            Console.WriteLine("DCET");
+
+                            Console.WriteLine("BSCPE");
+
+                            Console.WriteLine("BSA");
+
+                            Console.WriteLine("BSBA HRM 1");
+
+                            Console.WriteLine("BSBA HRM 2");
+
+                            Console.WriteLine("BEED");
+
+                            Console.WriteLine("BSED SS");
+
+                            Console.WriteLine("BSED ENG");
+
+                            Console.WriteLine("_______________________________");
+
+                            Console.WriteLine("Enter your Program: ");
+
+                            string program = Console.ReadLine();
+
+                            if (program == "BSIT" || program == "bsit")
+
+                            {
+
+                                Console.WriteLine("Schedule For Bachelor of Science in Information Technology (BSIT)");
+
+                                Console.WriteLine("ACCO 20213 Accounting Principles                                     M              6:00AM-9:00AM");
+
+                                Console.WriteLine("COMP 20213 Introduction to Computing                                 M/M            7:30AM-9:30AM/9:30AM-12:30PM");
+
+                                Console.WriteLine("COMP 20213 Computer Programming 1                                    T/T            7:30AM-9:30AM/9:30AM-12:30PM");
+
+                                Console.WriteLine("CWTS 10213 Civic Welfare Training Service 1                          T              5:00PM-8:00PM");
+
+                                Console.WriteLine("GEED 10213 Mathematics In Modern World                               M              2:00PM-5:00PM");
+
+                                Console.WriteLine("GEED 10213 Purposive Communication                                   TH/F           7:30AM-9:00AM/7:30AM-9:00AM");
+
+                                Console.WriteLine("GEED 10213 Filipinolohiya at Pambansang Kaunlaran                    T              2:00PM-5:00PM");
+
+                                Console.WriteLine("PHED 10213 Physical Fitness and Self Testing Activities              TH             2:00PM-5:00PM");
+
+                            }
+
+                            else if (program == "DICT" || program == "dict")
+
+                            {
+
+                                Console.WriteLine("Schedule For Diploma in Communication Technology (DICT)");
+
+                                Console.WriteLine("ACCO 20213 Accounting Principles                                       M             6:00PM-9:00PM");
+
+                                Console.WriteLine("COMP 20213 Introduction to Computing                                   M/M           3:00PM-5:00PM/5:00PM-8:00PM");
+
+                                Console.WriteLine("COMP 20213 Computer Programming 1                                      T/T           3:00PM-5:00PM/5:00PM-8:00PM");
+
+                                Console.WriteLine("CWTS 10213 Civic Welfare Training Service 1                            S             7:30AM-10:30AM");
+
+                                Console.WriteLine("GEED 10213 Mathematics In Modern World                                 TH            2:00PM-5:00PM");
+
+                                Console.WriteLine("GEED 10213 Purposive Communication                                     T/W           7:30AM-9:00AM/7:30AM-9:00AM");
+
+                                Console.WriteLine("ICTE 10213 Basic Computer Hardware Servicing                           F/F           4:00PM-5:00PM/6:00PM-9:00PM");
+
+                                Console.WriteLine("OFAD 30013 Keyboarding and Documents Processing w/ Laboratory          S/S           2:00PM-4:00PM/4:00PM-7:00PM");
+
+                                Console.WriteLine("PHED 10213 Physical Fitness and Self Testing Activities                TH            10:00AM-2:00PM");
+
+                            }
+
+                            else if (program =="BSIE" || program == "bsie")
+
+                            {
+
+                                Console.WriteLine("Schedule For Bachelor of Science in Industrial Engineering (BSIE)");
+
+                                Console.WriteLine("CHEM 20024 Chemistry for Engineers                                      T/T/T        7:30AM-92:20AM/8:30AM-10:30AM/10:30AM-1:30PM");
+
+                                Console.WriteLine("ENSC 20012 Computer Fundamentals and Programming                        W/W/W        2:00PM-3:00PM/3:00PM-5:00PM/5:00PM-8:00PM");
+
+                                Console.WriteLine("GEED 10042 The Contemporary World                                       T            2:00PM-5:00PM");
+
+                                Console.WriteLine("GEED 10052 Mathematics In Modern World                                  S            7:30AM-10:30AM");
+
+                                Console.WriteLine("GEED 10103 Filipinolohiya at Pambansang Kaunlaran                       T            5:00PM-8:00PM");
+
+                                Console.WriteLine("INEN 30013 Fundamental to Industrial Engineering                        W            9:00AM-12:00PM");
+
+                                Console.WriteLine("INEN 20022 Technical-Industrial Production Techniques                   F/F          5:00PM-4:00PM/6:00PM-9:00PM");
+
+                                Console.WriteLine("MATH 20043 Calculus                                                     F            10:00AM-1:30PM");
+
+                                Console.WriteLine("PHED 10012 Physical Fitness and Self Testing Activities                 F            2:00PM-4:00PM");
+
+                            }
+
+                            else if (program =="DCET" || program == "dcet")
+
+                            {
+
+                                Console.WriteLine("Schedule in Computer Engineering Technology (DCET)");
+
+                                Console.WriteLine("CMPE 30011 Computer Engineering as a Discipline                          F           5:00PM-6:00PM");
+
+                                Console.WriteLine("CMPE 30022 Programming Logic and Design                                  TH/F        5:00PM-6:00PM/6:00PM-9:00PM/5:00PM-8:00PM");
+
+                                Console.WriteLine("CMPE 40012 Computer Engineering Technology 1                             W/W/W       7:00AM-8:30AM/8:00AM-10:30AM/10:30AM-1:30PM");
+
+                                Console.WriteLine("GEED 10052 Web Development 1                                             S/S         2:00PM-4:00PM/4:00PM-7:00PM");
+
+                                Console.WriteLine("GEED 10103 Civic Welfare Training Service 1                              T           6:00PM-9:00PM");
+
+                                Console.WriteLine("INEN 30013 Understanding The Self                                        W           2:00PM-5:00PM");
+
+                                Console.WriteLine("INEN 20022 Purposive Communication                                       W           6:00PM-9:00PM");
+
+                                Console.WriteLine("MATH 20043 Calculus                                                      T           2:00PM-5:00PM");
+
+                                Console.WriteLine("PHED 10012 Physical Fitness and Self Testing Activities                  T           10:00AM-12:00PM");
+
+                            }
+
+                            else if (program =="BSCPE" || program == "bscpe")
+
+                            {
+
+                                Console.WriteLine("Schedule in Bachelor of Science in Computer Engineering (BSCPE)");
+
+                                Console.WriteLine("CHEM 20024 Chemistry for Engineers                                        T/T/T      3:00PM-4:00PM/4:00P,-6:00PM/6:00PM-9:00PM");
+
+                                Console.WriteLine("CMPE 30011 Computer Engineering as a Discipline                           F          6:00PM-7:00PM");
+
+                                Console.WriteLine("CMPE 30022 Programming Logic and Design                                   S/S/S      7:30AM-9:30AM/8:30AM-10:30AM/10:30AM-1:30PM");
+
+                                Console.WriteLine("CMPE 40012 Computer Engineering Technology 1                              TH/TH/TH   7:30AM-8:30AM/8:30AM-10:30AM/10:30AM-1:30PM");
+
+                                Console.WriteLine("CWTS 10013 Civic Welfare Training Service 1                               TH         6:00PM-9:00PM");
+
+                                Console.WriteLine("GEED 10023 Understanding The Self                                         F          10:30PM-1:30PM");
+
+                                Console.WriteLine("GEED 10053 Mathematics in Modern World                                    S          3:00PM-6:00PM");
+
+                                Console.WriteLine("GEED 10083 Science, Technology and Society                                TH         2:00PM-5:00PM");
+
+                                Console.WriteLine("MATH 20043 Calculus 1                                                     F          2:00PM-5:00PM");
+
+                                Console.WriteLine("PHED 10012 Physical Fitness and Self Testing Activities                   F          9:00AM-10:00AM");
+
+                            }
+
+                            else if (program == "BSA" || program == "bsa")
+
+                            {
+
+                                Console.WriteLine("Schedule For Bachelor of Science in Accountancy (BSA)");
+
+                                Console.WriteLine("ACCO 20033 Financial Accounting and Reporting                            S      7:30AM-10:30AM");
+
+                                Console.WriteLine("CWTS 10013 Civic Welfare Training Service 1                              S      10:30AM-1:30PM");
+
+                                Console.WriteLine("GEED 10043 The Contemporary World                                        F      7:30AM-10:30AM");
+
+                                Console.WriteLine("GEED 10073 Art Appreciation                                              W      2:00PM-5:00PM");
+
+                                Console.WriteLine("GEED 10083 Science, Technology and Society                               W      5:00PM-9:00PM");
+
+                                Console.WriteLine("GEED 10103 Filipinolohiya at Pambansang Kaunlaran                        F      5:00PM-8:00PM");
+
+                                Console.WriteLine("LAW  20013 Law on Obligation and Contracts                               S      2:00PM-5:00PM");
+
+                                Console.WriteLine("PHED 10012 Physical Fitness and Self Testing Activities                  F      12:00PM-2:00PM");
+
+                                Console.WriteLine("PSYC 40033 Human Behavior in Organization                                S      5:00PM-8:00PM");
+
+                            }
+
+                            else if (program == "BSBA HRM 1-1" || program == "bsba hrm 1-1")
+
+                            {
+
+                                Console.WriteLine("Schedule For Bachelor of Science in Business Administration Major in Human Resource Management (BSBA HRM 1)");
+
+                                Console.WriteLine("BUMA 20033 Good Governance and Corporate Social Responsibility           W       6:00PM-9:00PM");
+
+                                Console.WriteLine("CWTS 10013 Civic Welfare Training Service 1                              S       7:30AM-10:30AM");
+
+                                Console.WriteLine("GEED 10023 Understanding the Self                                        M       7:30AM-10:30AM");
+
+                                Console.WriteLine("GEED 10033 Readings in Philippine History                                TH      6:00PM-9:00PM");
+
+                                Console.WriteLine("GEED 10043 The Contemporary World                                        TH      10:30AM-1:30PM");
+
+                                Console.WriteLine("GEED 10053 Mathemarics in Modern World                                   S       6:00PM-9:00PM");
+
+                                Console.WriteLine("HRMA 20013 Human Resource Management                                     W       2:00PM-5:00PM");
+
+                                Console.WriteLine("HRMA 30012 Administrative and Office Management                          TH      10:30AM-1:30PM");
+
+                                Console.WriteLine("PHED 10012 Physical Fitness and Self Testing Activities                  W       12:00PM-2:00PM");
+
+                            }
+
+                            else if (program == "BSBA HRM 1-2" || program == "bsba hrm 1-2")
+
+                            {
+
+                                Console.WriteLine("Schedule For Bachelor of Science in Business Administration Major in Human Resource Management (BSBA HRM 1)");
+
+                                Console.WriteLine("BUMA 20033 Good Governance and Corporate Social Responsibility           W       6:00PM-9:00PM");
+
+                                Console.WriteLine("CWTS 10013 Civic Welfare Training Service 1                              S       7:30AM-10:30AM");
+
+                                Console.WriteLine("GEED 10023 Understanding the Self                                        M       6:00PM-9:00PM");
+
+                                Console.WriteLine("GEED 10033 Readings in Philippine History                                TH      6:00PM-9:00PM");
+
+                                Console.WriteLine("GEED 10043 The Contemporary World                                        TH      10:30AM-1:30PM");
+
+                                Console.WriteLine("GEED 10053 Mathematics in Modern World                                   S       3:00PM-6:00PM");
+
+                                Console.WriteLine("HRMA 20013 Human Resource Management                                     W       10:30AM-1:30PM");
+
+                                Console.WriteLine("HRMA 30012 Administrative and Office Management                          TH      10:30AM-1:30PM");
+
+                                Console.WriteLine("PHED 10012 Physical Fitness and Self Testing Activities                  W       3:00PM-5:00PM");
+
+                            }
+
+                            else if (program == "BEED" || program == "beed")
+
+                            {
+
+                                Console.WriteLine("Schedule For Bachelor of Elementary Education (BEED)");
+
+                                Console.WriteLine("CWTS 10013 Civic Welffare Training Service 1                                                M    6:00PM-9:00PM");
+
+                                Console.WriteLine("ELED 30013 Content and Pedagogy in the Mother Tongue                                        F    5:00PM-8:00PM");
+
+                                Console.WriteLine("ELED 30023 Pagtuturo ng Filipino sa Elementarya 1 Estruktura at Gamit ng Wika Filipino      TH   5:00PM-8:00PM");
+
+                                Console.WriteLine("GEED 10023 Understanding The Self                                                           T/W  7:30AM-9:00PM / 7:30PM-9:00PM");
+
+                                Console.WriteLine("GEED 10033 Readings In Philippine History                                                   TH   7:30AM-10:30AM");
+
+                                Console.WriteLine("GEED 10043 The Contemporary World                                                           S    2:00PM-5:00PM");
+
+                                Console.WriteLine("GEED 10053 Mathematics in Modern World                                                      S    5:00PM-8:00PM");
+
+                                Console.WriteLine("GEED 10063 Science, Technology and Society                                                  M    3:00PM-6:00PM");
+
+                                Console.WriteLine("GEED 10103 Filipinolohiya at Pambansang Kaunlaran                                           F    10:30AM-1:30PM");
+
+                                Console.WriteLine("PHED 10012 Physical Fitness and Self Testing Activities                                     M    12:00PM-2:00PM");
+
+                            }
+
+                            else if (program == "BSED SS" || program == "bsed ss")
+
+                            {
+
+                                Console.WriteLine("Schedule For Bachelor of Secondary Education Major in Social Sciences (BSED SS)");
+
+                                Console.WriteLine("CWTS 10013 Civic Welffare Training Service 1                                                M    6:00PM-9:00PM");
+
+                                Console.WriteLine("GEED 10023 Understanding The Self                                                           T/W  7:30AM-9:00PM / 7:30PM-9:00PM");
+
+                                Console.WriteLine("GEED 10033 Readings In Philippine History                                                   TH   7:30AM-10:30AM");
+
+                                Console.WriteLine("GEED 10043 The Contemporary World                                                           S    2:00PM-5:00PM");
+
+                                Console.WriteLine("GEED 10053 Mathematics in Modern World                                                      S    5:00PM-8:00PM");
+
+                                Console.WriteLine("GEED 10063 Science, Technology and Society                                                  M    3:00PM-6:00PM");
+
+                                Console.WriteLine("GEED 10103 Filipinolohiya at Pambansang Kaunlaran                                           F    10:30AM-1:30PM");
+
+                                Console.WriteLine("PHED 10012 Physical Fitness and Self Testing Activities                                     M    12:00PM-2:00PM");
+
+                                Console.WriteLine("SOST 30013 Foundation of Social Sciences                                                    W    2:00PM-5:00PM");
+
+                                Console.WriteLine("GEED 30023 Geograhy 1                                                                       M    6:00PM-9:00PM");
+
+                            }
+
+                            else if (program == "BSED ENG" || program == "bsed eng")
+
+                            {
+
+                                Console.WriteLine("Schedule For Bachelor of Secondary Education Major in Social Sciences (BSED SS)");
+
+                                Console.WriteLine("CWTS 10013 Civic Welffare Training Service 1                                                M    6:00PM-9:00PM");
+
+                                Console.WriteLine("GEED 10023 Understanding The Self                                                           T/W  7:30AM-9:00PM / 7:30PM-9:00PM");
+
+                                Console.WriteLine("GEED 10033 Readings In Philippine History                                                   TH   7:30AM-10:30AM");
+
+                                Console.WriteLine("GEED 10043 The Contemporary World                                                           S    2:00PM-5:00PM");
+
+                                Console.WriteLine("GEED 10053 Mathematics in Modern World                                                      S    5:00PM-8:00PM");
+
+                                Console.WriteLine("GEED 10063 Science, Technology and Society                                                  M    3:00PM-6:00PM");
+
+                                Console.WriteLine("GEED 10103 Filipinolohiya at Pambansang Kaunlaran                                           F    10:30AM-1:30PM");
+
+                                Console.WriteLine("PHED 10012 Physical Fitness and Self Testing Activities                                     M    12:00PM-2:00PM");
+
+                                Console.WriteLine("SEEN 30013 Introduction to Linguistics                                                      S    7:30AM-10:30AM");
+
+                                Console.WriteLine("NEEN 30023 Language, Culture and Society                                                    F    6:00PM-9:00PM");
+
+                            }
+
+                            else
+
+                            {
+
+                                Console.WriteLine("Sorry, That program was not included on our campus.");
+
+                            }
+
+                            break;
+
+                        }
+
+                        else
+
+                        {
+
+                            Console.WriteLine("!! CAN'T FIND THE STUDENT!");
+
+                        }
+
+                        break;
+
+                    case 3:
+
+                        {
+
+                            System.Environment.Exit(0);
+
+                        }
+
+                        break;
+
+                }
+
+            }
+
+        }
+
+        }
+
+   }
+
