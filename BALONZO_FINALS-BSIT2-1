@@ -8,8 +8,8 @@ namespace Rosejoy
 
     internal class Program
 
-    {
-
+    {	
+		
         static void Main(string[] args)
 
         {
@@ -36,7 +36,13 @@ namespace Rosejoy
 
             Console.WriteLine("Enter 2 to Log in and View Schedule");
 
-            Console.WriteLine("Enter 3 to Exit the program");
+			Console.WriteLine("Enter 3 to View PUP Grading System and Calculate Grades");
+			
+			Console.WriteLine("Enter 4 to View and Register to your Course' Organizations");
+			
+			Console.WriteLine("Enter 5 to Remove students' Data");
+
+            Console.WriteLine("Enter 6 to Exit the program");
 
             Console.WriteLine("_______________________________");
 
@@ -422,13 +428,241 @@ namespace Rosejoy
 
                         {
 
-                            Console.WriteLine("!! CAN'T FIND THE STUDENT!");
+                            Console.WriteLine("!! CAN'T FIND THE STUDENT!!");
 
                         }
 
                         break;
+						
+					case 3:
+					
+					    Console.WriteLine("\nPUP GRADING SYSTEM\n");
+						Console.WriteLine("Student shall be graded or marked in accordance with the following system.\n");
+						Console.WriteLine("*******************************\n");
 
-                    case 3:
+                        Console.WriteLine("     Grade        Equivalent        Remarks");
+						Console.WriteLine("     1.00          97-100           Excellent ");
+						Console.WriteLine("     1.25          94-96            Excellent");
+						Console.WriteLine("     1.50          91-93            Very Good");
+						Console.WriteLine("     1.75          88-90            Very Good");
+						Console.WriteLine("     2.00          85-87            Good");
+						Console.WriteLine("     2.25          82-84            Good");
+						Console.WriteLine("     2.50          79-81            Satisfactory");
+						Console.WriteLine("     2.75          76-78            Satisfactory");
+						Console.WriteLine("     3.00            75             Passing");
+						Console.WriteLine("     5.00          65-74            Failure");
+						Console.WriteLine("     INC             -              Incomplete");
+						Console.WriteLine("      W              -              Withdrawn");
+						Console.WriteLine("      D              -              Dropped");
+				
+						
+						double ans, score1, score2, score3, score4, score5, score6, score7, score8 ;
+
+                       Console.WriteLine("Enter your First Grade:");
+                       score1 = double.Parse(Console.ReadLine());
+
+                       Console.WriteLine("Enter your Second Grade:");
+                       score2 = double.Parse(Console.ReadLine());
+					   
+					   Console.WriteLine("Enter your Third Grade:");
+                       score3 = double.Parse(Console.ReadLine());
+
+                       Console.WriteLine("Enter your Fourt Grade:");
+                       score4 = double.Parse(Console.ReadLine());
+					   
+					   Console.WriteLine("Enter your Fifth Grade:");
+                       score5 = double.Parse(Console.ReadLine());
+
+                       Console.WriteLine("Enter your Sixth Grade:");
+                       score6 = double.Parse(Console.ReadLine());
+					   
+					   Console.WriteLine("Enter your Seventh Grade:");
+                       score7 = double.Parse(Console.ReadLine());
+
+                       Console.WriteLine("Enter your Eight Grade:");
+                       score8 = double.Parse(Console.ReadLine());
+					    
+				       ans = (score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8) / 8 ;
+					   
+					   Console.WriteLine("Your General Weight Average is: " + ans);
+
+						break;
+
+                    case 4:
+                           Console.WriteLine("***** Campus Organization Registration *****");
+
+                           Console.WriteLine("Institute of Bachelors of Information Techonology Students (IBITS)");
+
+                           Console.WriteLine("Young Educator's Society (YES)");
+
+                           Console.WriteLine("Junior Philippine Institute of Accountant (JPIA)");
+
+                           Console.WriteLine("Philippine Institute of Industrial Engineers (PIIE)");
+
+                           Console.WriteLine("Association of Computer Engineering Students (ACES)");
+
+                           Console.WriteLine("Human Resource Student Society (HRSS)");
+			
+                           Console.WriteLine("_______________________________");
+
+                            
+                           Console.WriteLine("Enter your Program to Register: ");
+
+                            string org = Console.ReadLine();
+
+                            if (org == "BSIT" || org == "bsit")
+							
+							{
+							
+							 Console.WriteLine("You are Qualified to register on IBITS");
+							 Console.WriteLine("Please Input your Student Number: ");
+							 string studnum = Console.ReadLine();
+							 Console.WriteLine("Enter your Name: ");
+							 string studname = Console.ReadLine();
+							 Console.WriteLine("Enter your Year Level: ");
+							 string studlevel = Console.ReadLine();
+				
+							 Console.WriteLine("You have succesfully registered on IBITS");
+							
+							}
+							
+							 if (org == "DICT" || org == "dict")
+							
+							{
+							
+							 Console.WriteLine("You are Qualified to register on IBITS");
+							 Console.WriteLine("Please Input your Student Number: ");
+							 string studnum = Console.ReadLine();
+							 Console.WriteLine("Enter your Name: ");
+							 string studname = Console.ReadLine();
+							 Console.WriteLine("Enter your Year Level: ");
+							 string studlevel = Console.ReadLine();
+				
+							 Console.WriteLine("You have succesfully registered on IBITS");
+							
+							}
+							
+					        else if (org == "BSED ENG" || org == "bsed eng")
+							{
+							
+							     Console.WriteLine("You are Qualified to register on YES");
+								 Console.WriteLine("Please Input your Student Number: ");
+							     string studnum = Console.ReadLine();
+								 Console.WriteLine("Enter your Name: ");
+							     string studname = Console.ReadLine();
+							     Console.WriteLine("Enter your Year Level: ");
+							     string studlevel = Console.ReadLine();
+								
+								 Console.WriteLine("You have succesfully registered on YES");
+							}
+							
+							else if (org == "BSED SS" || org == "bsed ss")
+							{
+							
+							     Console.WriteLine("You are Qualified to register on YES");
+								 Console.WriteLine("Please Input your Student Number: ");
+							     string studnum = Console.ReadLine();
+								 Console.WriteLine("Enter your Name: ");
+							     string studname = Console.ReadLine();
+							     Console.WriteLine("Enter your Year Level: ");
+							     string studlevel = Console.ReadLine();
+								  
+								 Console.WriteLine("You have succesfully registered on YES");
+							}
+							
+							else if (org == "BEED" || org == "beed")
+							{
+							
+							     Console.WriteLine("You are Qualified to register on YES");
+								 Console.WriteLine("Please Input your Student Number: ");
+							     string studnum = Console.ReadLine();
+								 Console.WriteLine("Enter your Name: ");
+							     string studname = Console.ReadLine();
+							     Console.WriteLine("Enter your Year Level: ");
+							     string studlevel = Console.ReadLine();
+								
+								 Console.WriteLine("You have succesfully registered on YES");
+							}
+							
+							else if (org == "BSCpE" || org == "bscpe" || org == "BSCPE")
+							{
+							
+							     Console.WriteLine("You are Qualified to register on ACES");
+								 Console.WriteLine("Please Input your Student Number: ");
+							     string studnum = Console.ReadLine();
+								 Console.WriteLine("Enter your Name: ");
+							     string studname = Console.ReadLine();
+							     Console.WriteLine("Enter your Year Level: ");
+							     string studlevel = Console.ReadLine();
+								 
+								 Console.WriteLine("You have succesfully registered on ACES");
+							}
+							
+							else if (org == "BSIE" || org == "bsie")
+							{
+							
+							     Console.WriteLine("You are Qualified to register on PIIE");
+								 Console.WriteLine("Please Input your Student Number: ");
+							     string studnum = Console.ReadLine();
+								 Console.WriteLine("Enter your Name: ");
+							     string studname = Console.ReadLine();
+							     Console.WriteLine("Enter your Year Level: ");
+							     string studlevel = Console.ReadLine();
+								  
+								 Console.WriteLine("You have succesfully registered on PIIE");
+							}
+							
+							else if (org == "BSA" || org == "bsa")
+							{
+							
+							     Console.WriteLine("You are Qualified to register on JPIA");
+								 Console.WriteLine("Please Input your Student Number: ");
+							     string studnum = Console.ReadLine();
+								 Console.WriteLine("Enter your Name: ");
+							     string studname = Console.ReadLine();
+							     Console.WriteLine("Enter your Year Level: ");
+							     string studlevel = Console.ReadLine();
+								  
+								 Console.WriteLine("You have succesfully registered on JPIA");
+							}
+							
+							else if (org == "BSBA HRM" || org == "bsba hrm")
+							{
+							
+							     Console.WriteLine("You are Qualified to register on HRSS");
+								 Console.WriteLine("Please Input your Student Number: ");
+							     string studnum = Console.ReadLine();
+								 Console.WriteLine("Enter your Name: ");
+							     string studname = Console.ReadLine();
+						    	 Console.WriteLine("Enter your Year Level: ");
+							     string studlevel = Console.ReadLine();
+								  
+								 Console.WriteLine("You have succesfully registered on HRSS");
+							}
+					
+						   break;
+				
+					case 5:
+					
+					     {
+						    Console.WriteLine("Enter Student name");
+                            string removename = Console.ReadLine();
+                           
+						    if (Student.Contains(removename))
+                       
+				           {
+                            Student.Remove(removename);
+                            Console.WriteLine("!! Succesfully remove the student!");
+                           }
+						    else
+							
+                           {
+                            Console.WriteLine("!! CAN'T FIND THE STUDENT!");
+                           }
+
+						 }	
+				         break;
+					case 6:
 
                         {
 
@@ -443,8 +677,5 @@ namespace Rosejoy
             }
 
         }
-
-        }
-
-   }
-
+		}
+		}
